@@ -3,17 +3,21 @@ Microsoft Visual Studio Solution File, Format Version 12.00
 # Visual Studio Version 17
 VisualStudioVersion = 17.8.34601.278
 MinimumVisualStudioVersion = 10.0.40219.1
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "01-FactoryMethodClassLibrary", "01-FactoryMethodClassLibrary\01-FactoryMethodClassLibrary.csproj", "{BF0B4F92-517B-4ADA-ADFB-454A8C79EC04}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "01-FactoryMethodClassLibrary", "01-FactoryMethodClassLibrary\01-FactoryMethodClassLibrary.csproj", "{BF0B4F92-517B-4ADA-ADFB-454A8C79EC04}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "02-AbstractFactoryClassLibrary", "02-AbstractFactoryClassLibrary\02-AbstractFactoryClassLibrary.csproj", "{246D54AE-99ED-407A-A82D-9D8F333DFB44}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "02-AbstractFactoryClassLibrary", "02-AbstractFactoryClassLibrary\02-AbstractFactoryClassLibrary.csproj", "{246D54AE-99ED-407A-A82D-9D8F333DFB44}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "03-SingletonClassLibrary", "03-SingletonClassLibrary\03-SingletonClassLibrary.csproj", "{969EC7D8-F53F-40FF-B170-115388DB00AB}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "03-SingletonClassLibrary", "03-SingletonClassLibrary\03-SingletonClassLibrary.csproj", "{969EC7D8-F53F-40FF-B170-115388DB00AB}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "04-PrototypeClassLibrary", "04-PrototypeClassLibrary\04-PrototypeClassLibrary.csproj", "{7FD0DB1E-001B-4A81-A599-5DB6C13289B5}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "04-PrototypeClassLibrary", "04-PrototypeClassLibrary\04-PrototypeClassLibrary.csproj", "{7FD0DB1E-001B-4A81-A599-5DB6C13289B5}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "05-BuilderClassLibrary", "05-BuilderClassLibrary\05-BuilderClassLibrary.csproj", "{33516620-199B-411B-98C3-ACE46DD1055D}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "05-BuilderClassLibrary", "05-BuilderClassLibrary\05-BuilderClassLibrary.csproj", "{33516620-199B-411B-98C3-ACE46DD1055D}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "01-ConsoleApp", "01-ConsoleApp\01-ConsoleApp.csproj", "{5A08AB7F-53FC-42A1-A95A-F41C44FEDF15}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "01-ConsoleApp", "01-ConsoleApp\01-ConsoleApp.csproj", "{5A08AB7F-53FC-42A1-A95A-F41C44FEDF15}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "02-ConsoleApp", "02-ConsoleApp\02-ConsoleApp.csproj", "{F0D63461-EF4A-4D53-BD99-0B8ED7FBDA94}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "03-ConsoleApp", "03-ConsoleApp\03-ConsoleApp.csproj", "{55776DA8-CB6C-4710-AC12-5AEB626D1C38}"
 EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
@@ -45,6 +49,14 @@ Global
 		{5A08AB7F-53FC-42A1-A95A-F41C44FEDF15}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{5A08AB7F-53FC-42A1-A95A-F41C44FEDF15}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{5A08AB7F-53FC-42A1-A95A-F41C44FEDF15}.Release|Any CPU.Build.0 = Release|Any CPU
+		{F0D63461-EF4A-4D53-BD99-0B8ED7FBDA94}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{F0D63461-EF4A-4D53-BD99-0B8ED7FBDA94}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{F0D63461-EF4A-4D53-BD99-0B8ED7FBDA94}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{F0D63461-EF4A-4D53-BD99-0B8ED7FBDA94}.Release|Any CPU.Build.0 = Release|Any CPU
+		{55776DA8-CB6C-4710-AC12-5AEB626D1C38}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{55776DA8-CB6C-4710-AC12-5AEB626D1C38}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{55776DA8-CB6C-4710-AC12-5AEB626D1C38}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{55776DA8-CB6C-4710-AC12-5AEB626D1C38}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE

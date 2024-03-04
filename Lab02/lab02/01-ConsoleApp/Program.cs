@@ -21,7 +21,7 @@ namespace _01_ConsoleApp
 
                 Console.Write("Choose subscription type: ");
                 int choice = int.Parse(Console.ReadLine() ?? string.Empty);
-                
+
                 ISubscriptionFactory selectedFactory = choice switch
                 {
                     1 => websiteFactory,
@@ -33,10 +33,13 @@ namespace _01_ConsoleApp
                 Console.Write("Enter subscriber name: ");
                 string? subscriberName = Console.ReadLine();
 
-                Subscription subscription = selectedFactory.CreateSubscription(subscriberName);
-                Console.WriteLine(subscription);
+                if (!string.IsNullOrEmpty(subscriberName))
+                {
+                    Subscription subscription = selectedFactory.CreateSubscription(subscriberName);
+                    Console.WriteLine(subscription);
+                }
             }
-            catch ( Exception ex )
+            catch (Exception ex)
             {
                 Console.ForegroundColor = ConsoleColor.Red;
                 Console.WriteLine($"{ex.GetType().Name}: {ex.Message}");
