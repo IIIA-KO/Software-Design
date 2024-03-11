@@ -4,13 +4,20 @@
     <projectFile>01-ConsoleApp/01-ConsoleApp.csproj</projectFile>
     <projectFile>02-ConsoleApp/02-ConsoleApp.csproj</projectFile>
     <projectFile>03-ConsoleApp/03-ConsoleApp.csproj</projectFile>
+    <projectFile>04-ConsoleApp/04-ConsoleApp.csproj</projectFile>
+    <projectFile>05-ConsoleApp/05-ConsoleApp.csproj</projectFile>
   </component>
   <component name="AutoImportSettings">
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
     <list default="true" id="19288c88-3909-4f6e-a200-1aaebc39588f" name="Changes" comment="">
-      <change afterPath="$PROJECT_DIR$/04-PrototypeClassLibrary/Virus.cs" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/05-BuilderClassLibrary/HeroDirector.cs" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/.idea.lab02/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/.idea.lab02/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/05-BuilderClassLibrary/Hero.cs" beforeDir="false" afterPath="$PROJECT_DIR$/05-BuilderClassLibrary/Hero.cs" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/05-BuilderClassLibrary/HeroBuilder.cs" beforeDir="false" afterPath="$PROJECT_DIR$/05-BuilderClassLibrary/HeroBuilder.cs" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/05-BuilderClassLibrary/IHeroBuilder.cs" beforeDir="false" afterPath="$PROJECT_DIR$/05-BuilderClassLibrary/IHeroBuilder.cs" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/05-ConsoleApp/Program.cs" beforeDir="false" afterPath="$PROJECT_DIR$/05-ConsoleApp/Program.cs" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -19,6 +26,12 @@
   </component>
   <component name="Git.Settings">
     <option name="RECENT_GIT_ROOT_PATH" value="$PROJECT_DIR$/../.." />
+  </component>
+  <component name="HighlightingSettingsPerFile">
+    <setting file="file://$USER_HOME$/AppData/Local/Symbols/src/dotnet/runtime/1381d5ebd2ab1f292848d5b19b80cf71ac332508/src/libraries/System.Console/src/System/Console.cs" root0="FORCE_HIGHLIGHTING" />
+    <setting file="file://$APPLICATION_CONFIG_DIR$/resharper-host/DecompilerCache/decompiler/fba9afd29efa49229d2dd911da0bdfedc8e910/03/4ef256b1/String.cs" root0="SKIP_HIGHLIGHTING" />
+    <setting file="file://$APPLICATION_CONFIG_DIR$/resharper-host/DecompilerCache/decompiler/fba9afd29efa49229d2dd911da0bdfedc8e910/13/209640ca/DefaultInterpolatedStringHandler.cs" root0="FORCE_HIGHLIGHTING" />
+    <setting file="file://$APPLICATION_CONFIG_DIR$/resharper-host/DecompilerCache/decompiler/fba9afd29efa49229d2dd911da0bdfedc8e910/30/afab3ba7/TextWriter.cs" root0="FORCE_HIGHLIGHTING" />
   </component>
   <component name="ProjectColorInfo">{
   &quot;customColor&quot;: &quot;&quot;,
@@ -33,6 +46,8 @@
   "keyToString": {
     ".NET Project.01-ConsoleApp.executor": "Run",
     ".NET Project.02-ConsoleApp.executor": "Run",
+    ".NET Project.04-ConsoleApp.executor": "Debug",
+    ".NET Project.05-ConsoleApp.executor": "Debug",
     "RunOnceActivity.OpenProjectViewOnStart": "true",
     "RunOnceActivity.ShowReadmeOnStart": "true",
     "git-widget-placeholder": "main",
@@ -51,7 +66,7 @@
     ]
   }
 }]]></component>
-  <component name="RunManager" selected=".NET Project.01-ConsoleApp">
+  <component name="RunManager" selected=".NET Project.05-ConsoleApp">
     <configuration name="01-ConsoleApp" type="DotNetProject" factoryName=".NET Project">
       <option name="EXE_PATH" value="" />
       <option name="PROGRAM_PARAMETERS" value="" />
@@ -106,6 +121,42 @@
         <option name="Build" />
       </method>
     </configuration>
+    <configuration name="04-ConsoleApp" type="DotNetProject" factoryName=".NET Project">
+      <option name="EXE_PATH" value="" />
+      <option name="PROGRAM_PARAMETERS" value="" />
+      <option name="WORKING_DIRECTORY" value="" />
+      <option name="PASS_PARENT_ENVS" value="1" />
+      <option name="USE_EXTERNAL_CONSOLE" value="0" />
+      <option name="USE_MONO" value="0" />
+      <option name="RUNTIME_ARGUMENTS" value="" />
+      <option name="PROJECT_PATH" value="$PROJECT_DIR$/04-ConsoleApp/04-ConsoleApp.csproj" />
+      <option name="PROJECT_EXE_PATH_TRACKING" value="1" />
+      <option name="PROJECT_ARGUMENTS_TRACKING" value="1" />
+      <option name="PROJECT_WORKING_DIRECTORY_TRACKING" value="1" />
+      <option name="PROJECT_KIND" value="DotNetCore" />
+      <option name="PROJECT_TFM" value="" />
+      <method v="2">
+        <option name="Build" />
+      </method>
+    </configuration>
+    <configuration name="05-ConsoleApp" type="DotNetProject" factoryName=".NET Project">
+      <option name="EXE_PATH" value="" />
+      <option name="PROGRAM_PARAMETERS" value="" />
+      <option name="WORKING_DIRECTORY" value="" />
+      <option name="PASS_PARENT_ENVS" value="1" />
+      <option name="USE_EXTERNAL_CONSOLE" value="0" />
+      <option name="USE_MONO" value="0" />
+      <option name="RUNTIME_ARGUMENTS" value="" />
+      <option name="PROJECT_PATH" value="$PROJECT_DIR$/05-ConsoleApp/05-ConsoleApp.csproj" />
+      <option name="PROJECT_EXE_PATH_TRACKING" value="1" />
+      <option name="PROJECT_ARGUMENTS_TRACKING" value="1" />
+      <option name="PROJECT_WORKING_DIRECTORY_TRACKING" value="1" />
+      <option name="PROJECT_KIND" value="DotNetCore" />
+      <option name="PROJECT_TFM" value="" />
+      <method v="2">
+        <option name="Build" />
+      </method>
+    </configuration>
   </component>
   <component name="SpellCheckerSettings" RuntimeDictionaries="0" Folders="0" CustomDictionaries="0" DefaultDictionary="application-level" UseSingleDictionary="true" transferred="true" />
   <component name="TaskManager">
@@ -118,6 +169,9 @@
       <workItem from="1709750307089" duration="159000" />
       <workItem from="1709795047939" duration="101000" />
       <workItem from="1709802115667" duration="1140000" />
+      <workItem from="1709922236367" duration="952000" />
+      <workItem from="1710070590636" duration="166000" />
+      <workItem from="1710157116293" duration="2258000" />
     </task>
     <servers />
   </component>

@@ -4,30 +4,15 @@ namespace _05_ConsoleApp
 {
     internal class Program
     {
-        static void Main(string[] args)
+        private static void Main(string[] args)
         {
             try
             {
-                Hero Hero = HeroBuilder
-                    .WithName("Hero")
-                    .InOutfit("Armor")
-                    .WithHeight(180)
-                    .WithBuild("Athletic")
-                    .WithHairColor("Blonde")
-                    .WithEyeColor("Blue")
-                    .Create();
+                var hero = HeroDirector.BuildHero();
+                var villain = HeroDirector.BuildVillain();
 
-                Hero Villian = HeroBuilder
-                    .WithName("Villian")
-                    .InOutfit("Dark Robe")
-                    .WithHeight(170)
-                    .WithBuild("Thin")
-                    .WithHairColor("Bald")
-                    .WithEyeColor("Red")
-                    .Create();
-
-                Console.WriteLine($"HERO:\n{Hero}\n");
-                Console.WriteLine($"VILLIAN:\n{Villian}");
+                Console.WriteLine($"HERO:\n{hero}\n");
+                Console.WriteLine($"VILLAIN:\n{villain}");
             }
             catch (Exception ex)
             {

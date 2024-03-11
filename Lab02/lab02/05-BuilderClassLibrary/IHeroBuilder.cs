@@ -13,8 +13,7 @@
         IExpectsBodyParameters WithEyeColor(string eyeColor);
         Hero Create();
     }
-
-
+    
     public interface IHeroBuilder 
         : IExpectsOutfit, IExpectsBodyParameters
     {
