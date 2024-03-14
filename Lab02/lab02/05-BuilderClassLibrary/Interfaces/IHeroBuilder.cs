@@ -1,4 +1,4 @@
-﻿namespace _05_BuilderClassLibrary
+﻿namespace _05_BuilderClassLibrary.Interfaces
 {
     public interface IExpectsOutfit
     {
@@ -13,8 +13,8 @@
         IExpectsBodyParameters WithEyeColor(string eyeColor);
         Hero Create();
     }
-    
-    public interface IHeroBuilder 
+
+    public interface IHeroBuilder
         : IExpectsOutfit, IExpectsBodyParameters
     {
     }

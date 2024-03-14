@@ -8,8 +8,8 @@ namespace _05_ConsoleApp
         {
             try
             {
-                var hero = HeroDirector.BuildHero();
-                var villain = HeroDirector.BuildVillain();
+                var hero = Director.BuildHero();
+                var villain = Director.BuildEnemy();
 
                 Console.WriteLine($"HERO:\n{hero}\n");
                 Console.WriteLine($"VILLAIN:\n{villain}");

@@ -1,5 +1,8 @@
-﻿namespace _05_BuilderClassLibrary
+﻿using _05_BuilderClassLibrary.Interfaces;
+
+namespace _05_BuilderClassLibrary
 {
+    // Step-wise builder with optional parameters:
     internal class HeroBuilder : IHeroBuilder
     {
         private string Name { get; set; }
@@ -19,6 +22,11 @@
             this.Build = "Build is not provided";
         }
 
+        private static string GetErrorMessage(string paramName)
+        {
+            return $"Cannot build a hero. Invalid {paramName} provided.";
+        }
+
         public static IExpectsOutfit WithName(string name) =>
             new HeroBuilder() { Name = ValidName(name) };
 
@@ -26,7 +34,7 @@
         {
             return !string.IsNullOrEmpty(name)
                 ? name
-                : throw new ArgumentException("Cannot build a hero. Invalid name provided.", nameof(name));
+                : throw new ArgumentException(GetErrorMessage(nameof(name)), nameof(name));
         }
 
         public IExpectsBodyParameters InOutfit(string outfit)
@@ -39,7 +47,7 @@
         {
             return !string.IsNullOrEmpty(outfit)
                 ? outfit
-                : throw new ArgumentException("Cannot build a hero. Invalid outfit provided.", nameof(outfit));
+                : throw new ArgumentException(GetErrorMessage(nameof(outfit)), nameof(outfit));
         }
 
         public IExpectsBodyParameters WithHeight(double height)
@@ -52,8 +60,7 @@
         {
             return height > 0
                 ? height
-                : throw new ArgumentOutOfRangeException(nameof(height),
-                    "Cannot build a hero. Invalid height provided.");
+                : throw new ArgumentOutOfRangeException(nameof(height), GetErrorMessage(nameof(height)));
         }
 
         public IExpectsBodyParameters WithHairColor(string hairColor)
@@ -78,8 +85,7 @@
         {
             return !string.IsNullOrEmpty(bodyParameter)
                 ? bodyParameter
-                : throw new ArgumentException($"Cannot build a hero. Invalid {nameof(bodyParameter)} provided.",
-                    nameof(bodyParameter));
+                : throw new ArgumentException(GetErrorMessage(nameof(bodyParameter)), nameof(bodyParameter));
         }
 
         public Hero Create()

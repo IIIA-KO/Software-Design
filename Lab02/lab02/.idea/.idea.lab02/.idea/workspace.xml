@@ -12,12 +12,7 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="19288c88-3909-4f6e-a200-1aaebc39588f" name="Changes" comment="">
-      <change afterPath="$PROJECT_DIR$/05-BuilderClassLibrary/HeroDirector.cs" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/.idea.lab02/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/.idea.lab02/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/05-BuilderClassLibrary/Hero.cs" beforeDir="false" afterPath="$PROJECT_DIR$/05-BuilderClassLibrary/Hero.cs" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/05-BuilderClassLibrary/HeroBuilder.cs" beforeDir="false" afterPath="$PROJECT_DIR$/05-BuilderClassLibrary/HeroBuilder.cs" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/05-BuilderClassLibrary/IHeroBuilder.cs" beforeDir="false" afterPath="$PROJECT_DIR$/05-BuilderClassLibrary/IHeroBuilder.cs" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/05-ConsoleApp/Program.cs" beforeDir="false" afterPath="$PROJECT_DIR$/05-ConsoleApp/Program.cs" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -32,7 +27,9 @@
     <setting file="file://$APPLICATION_CONFIG_DIR$/resharper-host/DecompilerCache/decompiler/fba9afd29efa49229d2dd911da0bdfedc8e910/03/4ef256b1/String.cs" root0="SKIP_HIGHLIGHTING" />
     <setting file="file://$APPLICATION_CONFIG_DIR$/resharper-host/DecompilerCache/decompiler/fba9afd29efa49229d2dd911da0bdfedc8e910/13/209640ca/DefaultInterpolatedStringHandler.cs" root0="FORCE_HIGHLIGHTING" />
     <setting file="file://$APPLICATION_CONFIG_DIR$/resharper-host/DecompilerCache/decompiler/fba9afd29efa49229d2dd911da0bdfedc8e910/30/afab3ba7/TextWriter.cs" root0="FORCE_HIGHLIGHTING" />
+    <setting file="mock://D:/ІЛЛЯ/Університет/2 курс/2 семестр/КПЗ/Lab02/lab02/05-BuilderClassLibrary/Hero.cs" root0="SKIP_HIGHLIGHTING" />
   </component>
+  <component name="MetaFilesCheckinStateConfiguration" checkMetaFiles="true" />
   <component name="ProjectColorInfo">{
   &quot;customColor&quot;: &quot;&quot;,
   &quot;associatedIndex&quot;: 4
@@ -42,30 +39,30 @@
     <option name="hideEmptyMiddlePackages" value="true" />
     <option name="showLibraryContents" value="true" />
   </component>
-  <component name="PropertiesComponent"><![CDATA[{
-  "keyToString": {
-    ".NET Project.01-ConsoleApp.executor": "Run",
-    ".NET Project.02-ConsoleApp.executor": "Run",
-    ".NET Project.04-ConsoleApp.executor": "Debug",
-    ".NET Project.05-ConsoleApp.executor": "Debug",
-    "RunOnceActivity.OpenProjectViewOnStart": "true",
-    "RunOnceActivity.ShowReadmeOnStart": "true",
-    "git-widget-placeholder": "main",
-    "node.js.detected.package.eslint": "true",
-    "node.js.detected.package.tslint": "true",
-    "node.js.selected.package.eslint": "(autodetect)",
-    "node.js.selected.package.tslint": "(autodetect)",
-    "nodejs_package_manager_path": "npm",
-    "vue.rearranger.settings.migration": "true"
+  <component name="PropertiesComponent">{
+  &quot;keyToString&quot;: {
+    &quot;.NET Project.01-ConsoleApp.executor&quot;: &quot;Run&quot;,
+    &quot;.NET Project.02-ConsoleApp.executor&quot;: &quot;Run&quot;,
+    &quot;.NET Project.04-ConsoleApp.executor&quot;: &quot;Debug&quot;,
+    &quot;.NET Project.05-ConsoleApp.executor&quot;: &quot;Run&quot;,
+    &quot;RunOnceActivity.OpenProjectViewOnStart&quot;: &quot;true&quot;,
+    &quot;RunOnceActivity.ShowReadmeOnStart&quot;: &quot;true&quot;,
+    &quot;git-widget-placeholder&quot;: &quot;main&quot;,
+    &quot;node.js.detected.package.eslint&quot;: &quot;true&quot;,
+    &quot;node.js.detected.package.tslint&quot;: &quot;true&quot;,
+    &quot;node.js.selected.package.eslint&quot;: &quot;(autodetect)&quot;,
+    &quot;node.js.selected.package.tslint&quot;: &quot;(autodetect)&quot;,
+    &quot;nodejs_package_manager_path&quot;: &quot;npm&quot;,
+    &quot;vue.rearranger.settings.migration&quot;: &quot;true&quot;
   },
-  "keyToStringList": {
-    "rider.external.source.directories": [
-      "C:\\Users\\illic\\AppData\\Roaming\\JetBrains\\Rider2023.3\\resharper-host\\DecompilerCache",
-      "C:\\Users\\illic\\AppData\\Roaming\\JetBrains\\Rider2023.3\\resharper-host\\SourcesCache",
-      "C:\\Users\\illic\\AppData\\Local\\Symbols\\src"
+  &quot;keyToStringList&quot;: {
+    &quot;rider.external.source.directories&quot;: [
+      &quot;C:\\Users\\illic\\AppData\\Roaming\\JetBrains\\Rider2023.3\\resharper-host\\DecompilerCache&quot;,
+      &quot;C:\\Users\\illic\\AppData\\Roaming\\JetBrains\\Rider2023.3\\resharper-host\\SourcesCache&quot;,
+      &quot;C:\\Users\\illic\\AppData\\Local\\Symbols\\src&quot;
     ]
   }
-}]]></component>
+}</component>
   <component name="RunManager" selected=".NET Project.05-ConsoleApp">
     <configuration name="01-ConsoleApp" type="DotNetProject" factoryName=".NET Project">
       <option name="EXE_PATH" value="" />
@@ -171,14 +168,27 @@
       <workItem from="1709802115667" duration="1140000" />
       <workItem from="1709922236367" duration="952000" />
       <workItem from="1710070590636" duration="166000" />
-      <workItem from="1710157116293" duration="2258000" />
+      <workItem from="1710157116293" duration="2421000" />
+      <workItem from="1710180826573" duration="73000" />
     </task>
+    <task id="LOCAL-00001" summary="Hero Director Added">
+      <option name="closed" value="true" />
+      <created>1710159494255</created>
+      <option name="number" value="00001" />
+      <option name="presentableId" value="LOCAL-00001" />
+      <option name="project" value="LOCAL" />
+      <updated>1710159494255</updated>
+    </task>
+    <option name="localTasksCounter" value="2" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
     <option name="version" value="3" />
   </component>
+  <component name="UnityCheckinConfiguration" checkUnsavedScenes="true" />
   <component name="VcsManagerConfiguration">
     <option name="CLEAR_INITIAL_COMMIT_MESSAGE" value="true" />
+    <MESSAGE value="Hero Director Added" />
+    <option name="LAST_COMMIT_MESSAGE" value="Hero Director Added" />
   </component>
 </project>
