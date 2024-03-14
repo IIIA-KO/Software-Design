@@ -79,7 +79,7 @@ namespace _05_BuilderClassLibrary
                  : throw new ArgumentException(GetErrorMessage(nameof(weapon)), nameof(weapon));
         }
 
-        public IExpectsToBeBoss BeingBoss(bool isBoss)
+        public IEnemyBuilder BeingBoss(bool isBoss)
         {
             this.IsBoss = isBoss;
             return this;

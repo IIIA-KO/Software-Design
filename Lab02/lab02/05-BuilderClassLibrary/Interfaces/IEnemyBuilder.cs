@@ -17,13 +17,13 @@
 
     public interface IExpectsToBeBoss
     {
-        IExpectsToBeBoss BeingBoss(bool isBoss);
-        Enemy Create();
+        IEnemyBuilder BeingBoss(bool isBoss);
     }
 
-    internal interface IEnemyBuilder
+    public interface IEnemyBuilder
         : IExpectsEyeColor, IExpectsAttackDamage,
             IExpectsWeapon, IExpectsToBeBoss
     {
+        Enemy Create();
     }
 }

@@ -13,10 +13,12 @@
                 .Create();
 
         public static Enemy BuildEnemy() =>
-            EnemyBuilder.WithName("Villain")
+            EnemyBuilder
+            .WithName("Villain")
             .WithEyeColor("Red")
             .WithAttackDamage(666)
             .WithWeapon("Lightning")
+            .BeingBoss(true)
             .Create();
     }
 }
