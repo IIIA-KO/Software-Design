@@ -1,20 +1,20 @@
 ﻿namespace _01_Adapter
 {
-    public class Logger
+    public class Logger : ILogger
     {
         public void Log(string message)
         {
-            PrintMessageWithColor(message, ConsoleColor.Green);
+            PrintMessageWithColor("Log: " + message, ConsoleColor.Green);
         }
 
         public void Error(string message)
         {
-            PrintMessageWithColor(message, ConsoleColor.Red);
+            PrintMessageWithColor("Error: " + message, ConsoleColor.Red);
         }
 
         public void Warn(string message)
         {
-            PrintMessageWithColor(message, ConsoleColor.DarkYellow);
+            PrintMessageWithColor("Warning: " + message, ConsoleColor.DarkYellow);
         }
 
         private static void PrintMessageWithColor(string message, ConsoleColor color)
