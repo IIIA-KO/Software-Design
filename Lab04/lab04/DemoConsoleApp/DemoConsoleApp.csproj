@@ -1,0 +1,19 @@
+﻿<Project Sdk="Microsoft.NET.Sdk">
+
+  <PropertyGroup>
+    <OutputType>Exe</OutputType>
+    <TargetFramework>net8.0</TargetFramework>
+    <ImplicitUsings>enable</ImplicitUsings>
+    <Nullable>enable</Nullable>
+  </PropertyGroup>
+
+  <ItemGroup>
+    <ProjectReference Include="..\01-ChainOfResponsibility\01-ChainOfResponsibility.csproj" />
+    <ProjectReference Include="..\02-Mediator\02-Mediator.csproj" />
+    <ProjectReference Include="..\03-Observer\03-Observer.csproj" />
+    <ProjectReference Include="..\04-Strategy\04-Strategy.csproj" />
+    <ProjectReference Include="..\05-Memento\05-Memento.csproj" />
+    <ProjectReference Include="..\DemoClassLibrary\DemoClassLibrary.csproj" />
+  </ItemGroup>
+
+</Project>
