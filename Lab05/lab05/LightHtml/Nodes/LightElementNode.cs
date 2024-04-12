@@ -28,7 +28,10 @@ namespace LightHtml.Nodes
             this.Display = display;
             this.Closing = closing;
             this.CssClasses = cssClasses ?? [];
-            this.Children = children ?? []; ;
+            this.Children = children ?? [];
+
+            this.OnCreated();
+            this.OnStylesApplied(this.CssClasses);
         }
 
         public override string OuterHTML => ToStringImpl(0);
@@ -44,20 +47,29 @@ namespace LightHtml.Nodes
                     sb.Append(child.OuterHTML);
                 }
 
+                this.OnTextRendered();
                 return sb.ToString();
             }
         }
 
         internal void AddChild(LightNode node)
         {
+            node.OnInserted(this);
             this.Children.Add(node);
         }
 
         protected virtual string OpeningTag(int indent) =>
             $"{new string(' ', IndentSize * indent)}<{this.TagName} class\"{this.DisplayClass}";
 
-        protected virtual string Classes =>
-            this.CssClasses.Count != 0 ? string.Join(", ", this.CssClasses) : string.Empty;
+        protected virtual string Classes
+        {
+            get
+            {
+                return this.CssClasses.Count != 0
+                    ? string.Join(", ", this.CssClasses)
+                    : string.Empty;
+            }
+        }
 
         protected virtual string DisplayClass =>
             this.Display == DisplayType.Block ? "block-element" : "inline-element";
@@ -109,5 +121,20 @@ namespace LightHtml.Nodes
                 observer.Update(this);
             }
         }
+
+        public override void OnCreated() =>
+            PrintWithColor($"Element Node {this.GetHashCode()} was creted!", ConsoleColor.DarkYellow);
+
+        public override void OnStylesApplied(List<string> styles)
+        {
+            if (this.CssClasses.Count != 0)
+            {
+                PrintWithColor($"Element Node {this.GetHashCode()} was applied with styles: " +
+                    $"{string.Join(", ", styles)}", ConsoleColor.DarkYellow);
+            }
+        }
+
+        public override void OnTextRendered() =>
+            PrintWithColor($"Text \"{this.InnerHTML}\" was rendered!", ConsoleColor.DarkYellow);
     }
 }
