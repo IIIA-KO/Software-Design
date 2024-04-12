@@ -9,9 +9,10 @@ namespace DemoConsoleApp
         {
             List<Demo> demos =
             [
-                new CompositeDemo(),
-                new StrategyDemo(),
-                new ObserverDemo()
+                //new CompositeDemo(),
+                //new StrategyDemo(),
+                //new ObserverDemo(),
+                new TemplateMethodDemo(),
             ];
 
             demos.ForEach(d => d.Run());
