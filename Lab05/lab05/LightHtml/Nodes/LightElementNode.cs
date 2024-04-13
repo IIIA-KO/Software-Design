@@ -61,16 +61,9 @@ namespace LightHtml.Nodes
         protected virtual string OpeningTag(int indent) =>
             $"{new string(' ', IndentSize * indent)}<{this.TagName} class\"{this.DisplayClass}";
 
-        protected virtual string Classes
-        {
-            get
-            {
-                return this.CssClasses.Count != 0
-                    ? string.Join(", ", this.CssClasses)
-                    : string.Empty;
-            }
-        }
-
+        protected virtual string Classes =>
+            this.CssClasses.Count != 0 ? string.Join(", ", this.CssClasses) : string.Empty;
+            
         protected virtual string DisplayClass =>
             this.Display == DisplayType.Block ? "block-element" : "inline-element";
 

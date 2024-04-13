@@ -12,7 +12,8 @@ namespace DemoConsoleApp
                 //new CompositeDemo(),
                 //new StrategyDemo(),
                 //new ObserverDemo(),
-                new TemplateMethodDemo(),
+                //new TemplateMethodDemo(),
+                new IteratorDemo()
             ];
 
             demos.ForEach(d => d.Run());
