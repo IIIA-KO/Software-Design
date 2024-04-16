@@ -6,7 +6,6 @@ namespace LightHtml.Nodes
 {
     public class LightElementNode : LightNode, ISubject
     {
-        protected static int IndentSize = 2;
         private readonly List<IObserver> _observers = [];
 
         public string TagName { get; }

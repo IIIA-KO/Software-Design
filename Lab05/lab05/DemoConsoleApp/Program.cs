@@ -13,7 +13,8 @@ namespace DemoConsoleApp
                 //new StrategyDemo(),
                 //new ObserverDemo(),
                 //new TemplateMethodDemo(),
-                new IteratorDemo()
+                //new IteratorDemo(),
+                new StateDemo()
             ];
 
             demos.ForEach(d => d.Run());
