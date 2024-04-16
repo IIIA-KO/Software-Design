@@ -4,25 +4,18 @@ using LightHtml.Strategy;
 
 namespace _04_Strategy
 {
-    public class LightImage : LightElementNode, IDisposable
+    public class LightImage(IImageLoadStrategy loadStrategy, string href) 
+        : LightElementNode("img", DisplayType.Inline, ClosingType.Single, [], []), IDisposable
     {
-        private readonly IImageLoadStrategy _loadStrategy;
+        private readonly IImageLoadStrategy _loadStrategy = loadStrategy;
 
-        public LightImage(IImageLoadStrategy loadStrategy, string href) : base("img", DisplayType.Inline, ClosingType.Single, [], [])
-        {
-            this._loadStrategy = loadStrategy;
-            this.Href = href;
-        }
-
-        public string Href { get; set; }
+        public string Href { get; set; } = href;
 
         protected override string OpeningTag(int indent) =>
            $"{new string(' ', IndentSize * indent)}<{this.TagName} href=\"{this.Href}\" class\"{this.DisplayClass}";
 
-        public async Task<byte[]> LoadImageAsync()
-        {
-            return await this._loadStrategy.LoadImageAsync(this.Href);
-        }
+        public async Task<byte[]> LoadImageAsync() =>
+            await this._loadStrategy.LoadImageAsync(this.Href);
 
         public override void OnCreated() =>
             PrintWithColor($"Image Node {this.GetHashCode()} was creted!", ConsoleColor.Cyan);
@@ -30,9 +23,7 @@ namespace _04_Strategy
         public override void OnRemoved() =>
             PrintWithColor($"Image Node {this.GetHashCode()} was removed!", ConsoleColor.Cyan);
 
-        public void Dispose()
-        {
+        public void Dispose() =>
             this.OnRemoved();
-        }
     }
 }
