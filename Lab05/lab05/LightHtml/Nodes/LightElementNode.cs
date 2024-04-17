@@ -1,5 +1,6 @@
 ﻿using System.Text;
 using LightHtml.Enums;
+using LightHtml.Visitor;
 using LightHtml.Observer;
 
 namespace LightHtml.Nodes
@@ -31,6 +32,15 @@ namespace LightHtml.Nodes
 
             this.OnCreated();
             this.OnStylesApplied(this.CssClasses);
+        }
+
+        public override void Accept(IVisitor visitor)
+        {
+            visitor.Visit(this);
+            foreach (var child in Children)
+            {
+                child.Accept(visitor);
+            }
         }
 
         public override string OuterHTML => ToStringImpl(0);

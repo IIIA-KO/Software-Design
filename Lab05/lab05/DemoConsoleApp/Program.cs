@@ -15,7 +15,8 @@ namespace DemoConsoleApp
                 //new TemplateMethodDemo(),
                 //new IteratorDemo(),
                 //new StateDemo(),
-                new CommandDemo()
+                //new CommandDemo(),
+                new VisitorDemo()
             ];
 
             demos.ForEach(d => d.Run());
