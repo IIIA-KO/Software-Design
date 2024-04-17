@@ -23,7 +23,7 @@ namespace LightHtml.Nodes
         public void TransitionTo(AnchorState anchorState) => 
             this._state.CurrentState = anchorState;
 
-        protected override string OpeningTag(int indent) =>
+        protected override string OpeningSegment(int indent) =>
             $"{new string(' ', IndentSize * indent)}<{this.TagName} href=\"{this.Href}\"";
 
         public void Print() => 

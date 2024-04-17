@@ -62,7 +62,7 @@ namespace DemoConsoleApp.Demos
             Console.WriteLine("Outer HTML:");
             Console.WriteLine(table.OuterHTML);
 
-            var document = new HtmlDocument(table, new HtmlDepthFirstIterator(table));
+            var document = new HtmlDocument(new HtmlDepthFirstIterator(table));
             Console.WriteLine("\n\nDepth:");
             foreach (var node in document)
             {

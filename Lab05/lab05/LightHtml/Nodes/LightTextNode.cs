@@ -2,7 +2,7 @@
 {
     public class LightTextNode : LightNode
     {
-        public string Text { get; }
+        public string Text { get; set; }
 
         public LightTextNode(string text)
         {

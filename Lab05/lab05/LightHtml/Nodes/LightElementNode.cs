@@ -11,7 +11,7 @@ namespace LightHtml.Nodes
         public string TagName { get; }
         public DisplayType Display { get; }
         public ClosingType Closing { get; }
-        public List<string> CssClasses { get; }
+        public List<string> CssClasses { get; set; }
         public List<LightNode> Children { get; }
 
         public LightElementNode(
@@ -57,25 +57,25 @@ namespace LightHtml.Nodes
             this.Children.Add(node);
         }
 
-        protected virtual string OpeningTag(int indent) =>
-            $"{new string(' ', IndentSize * indent)}<{this.TagName} class\"{this.DisplayClass}";
+        protected virtual string OpeningSegment(int indent) =>
+            $"{new string(' ', IndentSize * indent)}<{this.TagName} class=\"{this.DisplaySegment} ";
 
-        protected virtual string Classes =>
+        protected virtual string CssClassesSegment =>
             this.CssClasses.Count != 0 ? string.Join(", ", this.CssClasses) : string.Empty;
-            
-        protected virtual string DisplayClass =>
+
+        protected virtual string DisplaySegment =>
             this.Display == DisplayType.Block ? "block-element" : "inline-element";
 
-        protected virtual string ClosingTag =>
+        protected virtual string ClosingSegment =>
             this.Closing == ClosingType.Double ? $"</{this.TagName}>\n" : "/>\n";
 
         internal override string ToStringImpl(int indent)
         {
             var sb = new StringBuilder();
 
-            sb.Append(this.OpeningTag(indent));
+            sb.Append(this.OpeningSegment(indent));
 
-            sb.Append(this.Classes);
+            sb.Append(this.CssClassesSegment).Append("\">");
 
             if (this.Children.Count != 0)
             {
@@ -89,7 +89,7 @@ namespace LightHtml.Nodes
                 sb.Append(new string(' ', IndentSize * indent));
             }
 
-            sb.Append(this.ClosingTag);
+            sb.Append(this.ClosingSegment);
 
             return sb.ToString();
         }
