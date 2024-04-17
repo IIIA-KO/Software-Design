@@ -1,4 +1,6 @@
-﻿namespace LightHtml.Nodes
+﻿using LightHtml.Visitor;
+
+namespace LightHtml.Nodes
 {
     public class LightTextNode : LightNode
     {
@@ -21,6 +23,11 @@
                 this.OnTextRendered();
                 return this.Text;
             }
+        }
+
+        public override void Accept(IVisitor visitor)
+        {
+            visitor.Visit(this);
         }
 
         internal override string ToStringImpl(int indent) =>

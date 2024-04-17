@@ -1,5 +1,6 @@
 ﻿using LightHtml.Enums;
 using LightHtml.State;
+using LightHtml.Visitor;
 
 namespace LightHtml.Nodes
 {
@@ -18,6 +19,11 @@ namespace LightHtml.Nodes
             this._state.CurrentState = anchorState;
 
             TransitionTo(AnchorState.Default);
+        }
+
+        public override void Accept(IVisitor visitor)
+        {
+            visitor.Visit(this);
         }
 
         public void TransitionTo(AnchorState anchorState) => 

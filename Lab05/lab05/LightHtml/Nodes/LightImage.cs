@@ -1,5 +1,6 @@
 ﻿using LightHtml.Enums;
 using LightHtml.Nodes;
+using LightHtml.Visitor;
 using LightHtml.Strategy;
 
 namespace _04_Strategy
@@ -13,6 +14,11 @@ namespace _04_Strategy
 
         protected override string OpeningSegment(int indent) =>
            $"{new string(' ', IndentSize * indent)}<{this.TagName} href=\"{this.Href}\" class\"{this.DisplaySegment}";
+
+        public override void Accept(IVisitor visitor)
+        {
+            visitor.Visit(this);
+        }
 
         public async Task<byte[]> LoadImageAsync() =>
             await this._loadStrategy.LoadImageAsync(this.Href);

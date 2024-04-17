@@ -1,4 +1,6 @@
-﻿namespace LightHtml.Nodes
+﻿using LightHtml.Visitor;
+
+namespace LightHtml.Nodes
 {
     public abstract class LightNode
     {
@@ -6,13 +8,15 @@
         public abstract string OuterHTML { get; }
         public abstract string InnerHTML { get; }
 
-        internal abstract string ToStringImpl(int indent);
+        public abstract void Accept(IVisitor visitor);
 
         public virtual void OnCreated() { }
         public virtual void OnInserted(LightNode parent) { }
         public virtual void OnRemoved() { }
         public virtual void OnStylesApplied(List<string> styles) { }
         public virtual void OnTextRendered() { }
+        
+        internal abstract string ToStringImpl(int indent);
 
         internal static void PrintWithColor(string message, ConsoleColor color)
         {
