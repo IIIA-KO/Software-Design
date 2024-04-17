@@ -41,7 +41,7 @@ namespace LightHtml.Builder
             return this;
         }
 
-        public IExpectsChildren WithCssClasses(List<string> cssClasses)
+        public ILightHtmlBuilder WithCssClasses(List<string> cssClasses)
         {
             this._cssClasses.AddRange(cssClasses);
             return this;

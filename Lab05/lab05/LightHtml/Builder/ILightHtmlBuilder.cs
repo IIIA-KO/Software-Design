@@ -15,7 +15,7 @@ namespace LightHtml.Builder
 
     public interface IExpectsCssClasses
     {
-        IExpectsChildren WithCssClasses(List<string> cssClasses);
+        ILightHtmlBuilder WithCssClasses(List<string> cssClasses);
     }
 
     public interface IExpectsChildren

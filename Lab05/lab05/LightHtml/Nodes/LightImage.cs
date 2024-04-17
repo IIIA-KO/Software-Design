@@ -11,8 +11,8 @@ namespace _04_Strategy
 
         public string Href { get; set; } = href;
 
-        protected override string OpeningTag(int indent) =>
-           $"{new string(' ', IndentSize * indent)}<{this.TagName} href=\"{this.Href}\" class\"{this.DisplayClass}";
+        protected override string OpeningSegment(int indent) =>
+           $"{new string(' ', IndentSize * indent)}<{this.TagName} href=\"{this.Href}\" class\"{this.DisplaySegment}";
 
         public async Task<byte[]> LoadImageAsync() =>
             await this._loadStrategy.LoadImageAsync(this.Href);
